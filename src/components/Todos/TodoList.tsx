@@ -6,6 +6,7 @@ import { setFilter } from "@/store/slices/todoSlice";
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
 import { Todo } from "@/types";
+import Link from "next/link";
 
 export default function TodoList() {
   const { todos, filter } = useSelector((state: RootState) => state.todos);
@@ -19,7 +20,10 @@ export default function TodoList() {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Todo List</h1>
+      <div className="flex gap-4 text-center items-center  mb-6">
+        <h1 className="text-3xl font-bold">Todo List</h1>
+        <Link href={"/post"} className="text-gray-500 hover:text-blue-400">go to Post</Link>
+      </div>
 
       <TodoForm />
 

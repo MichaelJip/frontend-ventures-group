@@ -1,5 +1,8 @@
 import TodoList from "@/components/Todos/TodoList";
-import Image from "next/image";
+
+export const metadata = {
+  title: "ToDo List",
+};
 
 export default function Home() {
   return <TodoList />;
